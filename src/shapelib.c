@@ -203,11 +203,11 @@ static luaL_Reg shapelib_f[] = {
     {"open", shapelib_open},
     {"create", shapelib_create},
     {"getinfo", shapelib_getinfo},
+    {"close", shapelib_close},
     {0, 0}
 };
 
 static luaL_Reg shapelib_shpm[] = {
-    {"__gc", shapelib_close},
     {"__index", shapelib_readobject},
     {"__newindex", shapelib_writeobject},
     {"__len", shapelib_len},
