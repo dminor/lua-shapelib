@@ -201,10 +201,8 @@ static int shapelib_close(lua_State *ls)
 
 static luaL_Reg shapelib_f[] = {
     {"open", shapelib_open},
-    {"close", shapelib_close},
     {"create", shapelib_create},
     {"getinfo", shapelib_getinfo},
-    {"close", shapelib_close},
     {0, 0}
 };
 
