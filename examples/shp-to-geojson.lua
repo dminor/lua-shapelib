@@ -30,14 +30,23 @@ for i=1,entcount do
 
     ofile:write('      "coordinates": [\n')
     for v=1,#o do
-        ofile:write('        [' .. o[v].x .. ',' .. o[v].y .. '],\n')
+        ofile:write('        [' .. o[v].x .. ',' .. o[v].y .. ']')
+        if v == #o then
+            ofile:write('\n')
+        else
+            ofile:write(',\n') 
+        end
     end 
-    ofile:write('      ],\n')
-    ofile:write('    },\n')
+    ofile:write('      ]\n')
+
+    if i == entcount then
+        ofile:write('    }\n')
+    else
+        ofile:write('    },\n')
+    end 
 end
 
 ofile:write('  ]\n')
 ofile:write('}\n')
 ofile:close()
-
 
